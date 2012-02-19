@@ -24,8 +24,7 @@ class JOJO_Plugin_Jojo_blogicons extends JOJO_Plugin
 
         global $smarty;
         $url          = urlencode(_SITEURL.'/'._SITEURI.'/');
-        $all_tpl_vars = $smarty->get_template_vars();
-        $jojo_article = $smarty->get_template_vars('jojo_article');
+        @$jojo_article = $smarty->get_template_vars('jojo_article');
         $title        = rawurlencode($jojo_article['ar_title']);
 
         /* The HTML code for each of the different blog icons available */
